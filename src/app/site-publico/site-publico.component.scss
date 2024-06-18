@@ -1,0 +1,135 @@
+.header{
+  // background-color: #007ebd;
+  background-color: #efefef;
+
+  .mini-header{
+    border-bottom: 1px solid #3a495c;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    align-items: center;
+
+    .desenvolvido-por{
+      font-weight: 700;
+      font-size: 12px;
+    }
+    .bloco-imgs{
+      display: flex;
+      align-items: center;
+
+      .img-logo-amatra{
+        cursor: pointer;
+        width: 153px;
+        height: 56px;
+      }
+      .img-logo-ematra{
+        width: 153px;
+      }
+    }
+  }
+  .header-sub-1{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px;
+
+    .sistema-associado {
+      color: #3a495c;
+      font-size: 24px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .sistema-associado:hover {
+      transform: scale(1.1);
+    }
+  }
+  .header-sub-2{
+    display: flex;
+    justify-content: space-around;
+    background-color: #3a495c;
+    padding: 20px;
+    color: #fff;
+
+    span{
+      font-size: 18px;
+
+      a{
+        color: #fff;
+        text-decoration: none;
+        font-size: 18px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        transition: background-color 0.3s, color 0.3s;
+        margin: 0 10px;
+
+      }
+    }
+  }
+}
+
+
+a:hover{
+  background-color: #3b5998;
+  color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.content-center{
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 30px;
+
+  .content-img-juiz{
+
+    .img-juiz{
+      height: 515px;
+      border-radius: 10px;
+    }
+  }
+  .content-text{
+    max-width: 396px;
+
+  }
+
+  /* Parágrafos */
+p {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+/* Subtítulos das seções */
+h3 {
+  font-size: 1.2em;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: #16a085;
+}
+
+/* Listas */
+ul, ol {
+  margin-bottom: 20px;
+  padding-left: 20px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+/* Links */
+a {
+  color: #2980b9;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+}
+
+.adaptacao{
+  width: 305%;
+}

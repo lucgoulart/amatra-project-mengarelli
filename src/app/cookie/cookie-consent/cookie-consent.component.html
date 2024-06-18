@@ -1,0 +1,8 @@
+<div *ngIf="!cookiesAccepted" class="cookie-consent-banner">
+  <p>
+    Utilizamos ferramentas e serviços de terceiros que utilizam cookies. Essas ferramentas nos ajudam a oferecer uma melhor experiência de navegação no site.
+    <br>
+    Ao clicar no botão “Aceitar” ou continuar a visualizar nosso site, você concorda com o uso de cookies.
+  </p>
+  <button (click)="acceptCookies()" class="cookie-consent-button">Aceitar</button>
+</div>
