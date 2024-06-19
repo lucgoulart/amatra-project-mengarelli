@@ -70,23 +70,24 @@
   }
 }
 
-
 a:hover{
   background-color: #3b5998;
   color: #fff;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+
 .content-center{
   display: flex;
   justify-content: center;
   gap: 50px;
   margin-top: 30px;
+  font-size: 18px;
 
   .content-img-juiz{
 
     .img-juiz{
-      height: 515px;
+      height: 454px;
       border-radius: 10px;
     }
   }
@@ -130,6 +131,6 @@ a:hover {
 }
 }
 
-.adaptacao{
-  width: 305%;
+.text-importancia{
+  max-width: 681px;
 }

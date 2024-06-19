@@ -22,70 +22,140 @@
 
   </div>
 
-<div class="header-sub-1">
+
+
+  <div class="header-sub-1">
   <div>
     <span class="sistema-associado">Sistema de Gerenciamento para Associações de Magistrados</span>
   </div>
   <div>
   </div>
-
-
 </div>
 
 
 
+<!-- site-publico.component.html -->
 <div class="header-sub-2">
+  <div>
+    <span>{{ currentDateTime }}</span>
+  </div>
 
+  <div>
+    <span><a href="#" (click)="showContent('amatra')">Amatra</a></span>
+  </div>
 
-<div>
-<span>17/06 - 21:40:00</span>
-</div>
+  <div>
+    <span><a href="#" (click)="showContent('contato')">Contato</a></span>
+  </div>
 
+  <div>
+    <span><a href="#" (click)="showContent('tecnologia')">Mengarelli Tecnologia</a></span>
+  </div>
 
-<div>
-  <span><a href="#">Contato</a></span>
-</div>
-
-<div>
-  <span><a href="#">Mengarelli Tecnologia</a></span>
-</div>
-
-<div>
-  <span><a href="#">Sobre</a></span>
-</div>
-
+  <div>
+    <span><a href="#" (click)="showContent('sobre')">Sobre</a></span>
+  </div>
 </div>
 </header>
 
-<div class="content-center">
+<div class="content">
+  <div *ngIf="activeContent === 'amatra'">
+    <div class="content-center">
 
 
-  <div class="content-text">
-    <p>A Amatra IX é a associação que representa os magistrados da Justiça do Trabalho da 9ª Região, que abrange o estado do Paraná. Sua missão é defender os interesses e os direitos dos juízes do trabalho, promover a valorização da magistratura trabalhista e contribuir para o aperfeiçoamento do Direito do Trabalho.</p>
+      <div class="content-text">
+        <p>A Amatra IX é a associação que representa os magistrados da Justiça do Trabalho da 9ª Região, que abrange o estado do Paraná. Sua missão é defender os interesses e os direitos dos juízes do trabalho, promover a valorização da magistratura trabalhista e contribuir para o aperfeiçoamento do Direito do Trabalho.</p>
 
-    <p><strong>Representação Institucional:</strong> Defender os direitos e interesses dos magistrados da Justiça do Trabalho da 9ª Região.</p>
-    <p><strong>Aperfeiçoamento Profissional:</strong> Promover cursos, seminários e eventos que visem ao aprimoramento técnico e jurídico dos seus associados.</p>
-    <p><strong>Valorização da Magistratura:</strong> Atuar para a valorização da carreira dos juízes do trabalho, buscando melhores condições de trabalho e remuneração adequada.</p>
-    <p><strong>Contribuição Social:</strong> Desenvolver ações e projetos sociais que promovam a justiça social e a cidadania.</p>
+        <p><strong>Representação Institucional:</strong> Defender os direitos e interesses dos magistrados da Justiça do Trabalho da 9ª Região.</p>
+        <p><strong>Aperfeiçoamento Profissional:</strong> Promover cursos, seminários e eventos que visem ao aprimoramento técnico e jurídico dos seus associados.</p>
+        <p><strong>Valorização da Magistratura:</strong> Atuar para a valorização da carreira dos juízes do trabalho, buscando melhores condições de trabalho e remuneração adequada.</p>
+        <p><strong>Contribuição Social:</strong> Desenvolver ações e projetos sociais que promovam a justiça social e a cidadania.</p>
 
-    <h3>Atividades</h3>
-    <p>A Amatra IX organiza diversas atividades voltadas para seus associados e para a sociedade em geral, incluindo:</p>
+        <h3>Importância</h3>
+          <p>A atuação da Amatra IX é fundamental para garantir a independência e a autonomia da magistratura trabalhista, além de contribuir para o desenvolvimento do Direito do Trabalho no Brasil. Ela serve como uma voz ativa na defesa dos magistrados e no fortalecimento da Justiça do Trabalho, visando sempre ao bem-estar dos trabalhadores e à equidade nas relações de trabalho.</p>
+      </div>
 
-    <ul>
-      <li class="adaptacao"><strong>Eventos Jurídicos:</strong> Seminários, congressos e palestras sobre temas relevantes do Direito do Trabalho e da Justiça do Trabalho.</li>
-      <li class="adaptacao"><strong>Publicações:</strong> Produção de artigos, revistas e boletins informativos sobre jurisprudência e questões trabalhistas.</li>
-      <li class="adaptacai"><strong>Ações Sociais:</strong> Projetos de cidadania e justiça social, buscando aproximar a Justiça do Trabalho da comunidade.</li>
-    </ul>
-<div>
-    <h3>Importância</h3>
-    <p class="adaptacao">A atuação da Amatra IX é fundamental para garantir a independência e a autonomia da magistratura trabalhista, além de contribuir para o desenvolvimento do Direito do Trabalho no Brasil. Ela serve como uma voz ativa na defesa dos magistrados e no fortalecimento da Justiça do Trabalho, visando sempre ao bem-estar dos trabalhadores e à equidade nas relações de trabalho.</p>
-</div>
+      <div class="content-img-juiz">
+        <img src="./assets/juiz.jpeg" alt="" class="img-juiz">
+        <div class="text-importancia">
+          <h3>Atividades</h3>
+          <p>A Amatra IX organiza diversas atividades voltadas para seus associados e para a sociedade em geral, incluindo:</p>
+
+          <ul>
+            <li><strong>Eventos Jurídicos:</strong> Seminários, congressos e palestras sobre temas relevantes do Direito do Trabalho e da Justiça do Trabalho.</li>
+            <li><strong>Publicações:</strong> Produção de artigos, revistas e boletins informativos sobre jurisprudência e questões trabalhistas.</li>
+            <li><strong>Ações Sociais:</strong> Projetos de cidadania e justiça social, buscando aproximar a Justiça do Trabalho da comunidade.</li>
+          </ul>
+
+      </div>
+      </div>
+    </div>
   </div>
 
-  <div class="content-img-juiz">
-    <img src="./assets/juiz.jpeg" alt="" class="img-juiz">
+
+
+
+
+
+
+
+  <div *ngIf="activeContent === 'contato'">
+    <p>Informações de Contato</p>
+  </div>
+
+  <div *ngIf="activeContent === 'tecnologia'">
+    <p>Informações sobre Mengarelli Tecnologia</p>
+  </div>
+
+  <div *ngIf="activeContent === 'sobre'">
+    <p>Informações sobre a Empresa</p>
   </div>
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
