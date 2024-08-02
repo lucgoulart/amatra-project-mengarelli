@@ -1,24 +1,78 @@
-
-
 <div class="login-container">
+  <div class="login-informations">
+    <p class="hora">{{currentDateTime}}</p>
+    <div>
+    <img src="/assets/amatra-ix-sml-Photoroom.png" class="img-logo-amatra" alt="">
+    <p class="sistema">Sistema de Gerenciamento para Associações de Magistrados</p>
+    </div>
+    <div class="content-informations-mengarelli">
+      <p class="desenvolvido-por">Desenvolvido por Mengarelli Tecnologia</p>
+      <a href="" class="link">Contato</a>
+      <a href="http://www.mengarelli.com.br/" class="link">Mengarelli Tecnologia</a>
+    </div>
+  </div>
   <div class="login-form">
-    <h2>Login</h2>
-    <form>
+    <form (ngSubmit)="login()">
       <div class="form-group">
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email">
+        <label for="email">Usuário</label>
+        <input type="email" id="email" [(ngModel)]="usuario" name="email" required>
       </div>
       <div class="form-group">
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password">
+        <label for="password">Senha</label>
+        <input type="password" id="password" [(ngModel)]="password" name="password" required>
       </div>
-      <button type="submit">Login</button>
+      <button type="submit" class="login-button">Login</button>
     </form>
+  </div>
+  <div>
+    <span style="color: #471f1f;">.</span>
   </div>
 </div>
 
 
+<!-- Error Modal -->
+<div class="modal" tabindex="-1" role="dialog" *ngIf="showErrorModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div>
+          <h5 class="title-modal">Login</h5>
+        </div>
+      </div>
+      <div class="modal-body">
+        <hr>
+        <p class="msg-modal">Não foi possível autenticar seu acesso, tente mais tarde!</p>
+        <hr>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn-fechar" (click)="closeErrorModal()">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- Modal de Boas-Vindas -->
+<div class="modal-boas-vindas" tabindex="-1" role="dialog" *ngIf="showWelcomeModal">
+  <div class="modal-dialog-boas-vindas" role="document">
+    <div class="modal-content-boas-vindas">
+      <div class="modal-header-boas-vindas">
+        <h5 class="modal-title-boas-vindas">Bem-vindo ao Sistema de Gerenciamento para Associações de Magistrados - Amatra!</h5>
+      </div>
+      <div class="modal-body-boas-vindas">
+        <p>Estamos felizes em apresentar a nova versão do sistema Amatra.</p>
+        <p><strong>Versão:</strong> {{ version }}</p>
+        <p>Explore as novas funcionalidades e aproveite uma experiência aprimorada.</p>
+      </div>
+      <div class="modal-footer-boas-vindas">
+        <button type="button" class="btn-boas-vindas" (click)="closeWelcomeModal()">Fechar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <app-cookie-consent></app-cookie-consent>
-
-
 

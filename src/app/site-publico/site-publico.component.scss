@@ -1,20 +1,62 @@
 .login-container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  height: 100vh;
+  height: 102vh;
   background-image: url('/assets/vista-do-martelo-da-justica-3d.jpg');
   background-size: cover;
   background-position: center;
 }
 
+.login-informations{
+  height: 86vh;
+  background: rgb(51 15 15 / 80%);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding-top: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.img-logo-amatra{
+  margin-bottom: -28px;
+}
+
+.hora{
+  color: #fff;
+  text-align: center;
+}
+
+.sistema{
+  color: #fff;
+  max-width: 267px;
+  text-align: center;
+  margin-left: 30px;
+  padding-top: 24px;
+  border-top: 1px solid;
+}
+.content-informations-mengarelli{
+  margin-top: 27rem;
+  display: flex;
+  flex-direction: column;
+
+  .link{
+    margin-top: 10px;
+    color: #925525;;
+  }
+}
+.desenvolvido-por{
+  color: #fff;
+}
+
 .login-form {
-  background: rgba(255, 255, 255, 0.8);
-  padding: 20px;
+  background: rgb(33 2 2 / 80%);
+  padding: 60px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   max-width: 400px;
   width: 100%;
+  margin-left: -106px;
 }
 
 .form-group {
@@ -24,25 +66,169 @@
 label {
   display: block;
   margin-bottom: 5px;
+  color: #fff;
 }
 
 input {
-  width: 100%;
+  width: 378px;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
+  background: rgba(255, 255, 255, 0.8);
 }
 
-button {
+.login-button {
   width: 100%;
   padding: 10px;
-  background-color: #007BFF;
+  background: rgb(19 11 7);
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
 }
 
-button:hover {
-  background-color: #0056b3;
+.login-button:hover {
+  background: rgb(66 26 26);
 }
+
+
+
+.modal {
+  display: block;
+  position: fixed;
+  z-index: 1050;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  outline: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-dialog {
+  position: absolute;
+  top: 20%;
+  left: 54%;
+  transform: translate(-50%, -50%);
+  width: auto;
+  margin: 0;
+  pointer-events: none;
+  animation: slideIn 0.5s ease-out;
+}
+
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 0.3rem;
+  outline: 0;
+  padding-left: 30px;
+  padding-right: 30px;
+}
+.modal-footer{
+  width: 100%;
+  display: flex;
+  justify-content: end;
+  padding-top: 20px;
+  padding-bottom: 15px;
+}
+
+.btn-fechar {
+  cursor: pointer;
+  width: 87px;
+  padding: 10px;
+}
+
+.title-modal{
+  font-size: 1.2rem;
+  color: rgba(51, 15, 15, 0.8);
+}
+
+.msg-modal{
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+/* Animação de deslizar para baixo */
+@keyframes slideIn {
+  0% {
+    transform: translate(-50%, -100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+}
+
+.modal-boas-vindas {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); // Fundo semi-transparente
+  z-index: 1050; // Garante que o modal esteja acima de outros conteúdos
+
+  .modal-dialog-boas-vindas {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 500px; // Largura máxima do modal
+    width: 100%; // Faz com que o modal use a largura total até o máximo definido
+    margin-left: 11%;
+
+    .modal-content-boas-vindas {
+      border-radius: 0.3rem; // Cantos arredondados
+      box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2); // Sombra para o modal
+      background-color: #fff; // Fundo branco do conteúdo do modal
+    }
+  }
+
+  .modal-header-boas-vindas {
+    border-bottom: 1px solid #e9ecef; // Linha de separação no cabeçalho
+    padding: 0.75rem; // Espaçamento interno do cabeçalho
+
+    .modal-title-boas-vindas{
+      font-size: 1.2rem;
+      color: rgba(51, 15, 15, 0.8);
+      text-align: center;
+      font-weight: 600;
+    }
+    .close {
+      font-size: 1.5rem; // Tamanho do botão de fechar
+      font-weight: 400;
+      opacity: 0.5; // Opacidade do botão de fechar
+      &:hover {
+        opacity: 0.75; // Opacidade aumentada ao passar o mouse
+      }
+    }
+  }
+
+  .modal-body-boas-vindas {
+    padding: 1rem; // Espaçamento interno do corpo do modal
+  }
+
+  .modal-footer-boas-vindas {
+    border-top: 1px solid #e9ecef; // Linha de separação no rodapé
+    padding: 0.75rem; // Espaçamento interno do rodapé
+    display: flex;
+    justify-content: end;
+
+    .btn-boas-vindas {
+      margin: 0.2rem; // Margem dos botões no rodapé
+      cursor: pointer;
+      width: 87px;
+      padding: 10px;
+    }
+  }
+}
+
+

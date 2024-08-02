@@ -5,18 +5,21 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CookieConsentComponent } from './cookie/cookie-consent/cookie-consent.component';
 import { SitePublicoComponent } from './site-publico/site-publico.component';
+import { FormsModule } from '@angular/forms';
+
 
 
 @NgModule({
   declarations: [
     AppComponent,
     CookieConsentComponent,
-    SitePublicoComponent
+    SitePublicoComponent,
 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
 
   exports: [
