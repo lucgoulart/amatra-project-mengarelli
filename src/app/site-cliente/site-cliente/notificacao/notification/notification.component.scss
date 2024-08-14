@@ -1,0 +1,127 @@
+/* notification-icon.component.scss */
+.notification-container {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+
+  .icon-notification {
+    width: 25px;
+    height: 25px;
+    margin-bottom: 50px;
+  }
+
+  .notification-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: red;
+    color: white;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+  }
+
+  .notification-menu {
+    position: absolute;
+    top: -39px;
+    left: -160px;
+    background: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10000;
+    width: 300px;
+    max-height: 1000px;
+    overflow-y: auto;
+    border-top: 1px solid #372525;
+    transform: translateX(-100%); /* Inicialmente fora da tela à esquerda */
+    transition: transform 0.3s ease-out, width 0.3s ease-out, height 0.3s ease-out; /* Transição suave de 0.3s */
+    opacity: 0; /* Esconder visualmente o menu */
+    pointer-events: none; /* Desabilitar interação quando fechado */
+}
+
+.notification-menu.active {
+    transform: translateX(0); /* Menu visível na tela */
+    opacity: 1; /* Mostrar visualmente o menu */
+    pointer-events: auto; /* Habilitar interação quando aberto */
+}
+
+.notification-menu.expanded {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    max-height: none;
+    transform: none;
+    z-index: 10000; /* Certifique-se de que está acima de outros elementos */
+}
+
+
+
+::-webkit-scrollbar {
+  width: 5px; /* Largura da barra de rolagem */
+}
+
+::-webkit-scrollbar-track {
+  background: #fff; /* Cor do fundo da barra de rolagem */
+  border-radius: 10px; /* Bordas arredondadas do fundo */
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(51, 15, 15, 0.8); /* Cor do "polegar" da barra de rolagem */
+  border-radius: 10px; /* Bordas arredondadas do "polegar" */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(51, 15, 15, 0.8);
+}
+
+
+  .notification-header {
+    margin-bottom: 10px;
+    background: rgba(51, 15, 15, 0.8);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    p{
+      color: #fff;
+      font-size: 1.2rem;
+    }
+  }
+
+  .notification {
+    padding: 10px;
+
+    .description-notifications{
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+      padding: 20px;
+      margin-bottom: 30px;
+      margin-top: 0px;
+      border-left: 1px solid rgba(51, 15, 15, 0.8);
+    }
+
+    .description-notifications:hover {
+      background: rgba(51, 15, 15, 0.8);/* Altera a cor de fundo para verde */
+      color: white; /* Opcional: altera a cor do texto para branco para melhor contraste */
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.4); /* Opcional: aumenta a sombra para destaque adicional */
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

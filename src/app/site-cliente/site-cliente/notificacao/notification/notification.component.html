@@ -1,0 +1,25 @@
+<div class="notification-container">
+  <img src="/assets/icons8-tribunal-50.png" class="icon-notification" alt="Notificações" (click)="toggleMenu()">
+  <div *ngIf="notificationCount > 0" class="notification-count">{{ notificationCount }}</div>
+  <div [ngClass]="{'notification-menu': true, 'active': menuVisible, 'expanded': menuExpanded}">
+    <div class="content-notification-open">
+      <div class="notification-header">
+        <div>
+          <p style="font-family: RobotoRegular;">Notificações</p>
+        </div>
+        <div style="display: flex; gap: 15px;">
+          <p (click)="expandMenu($event)"><img src="/assets/expand-arrows.png" alt=""></p>
+          <p (click)="closeMenu()"><img src="/assets/close.png" alt=""></p>
+        </div>
+      </div>
+      <div class="notification">
+        <div *ngFor="let notification of notifications" class="notification-item">
+          <div class="description-notifications">
+            <img src="/assets/e-mail.png" class="icon-message" alt="Mensagem">
+          <p>{{ notification }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,92 @@
+
+.site-cliente-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('/assets/realistic-stacked-books-shelf.jpg');
+  background-position: center;
+  background-size: cover; /* Ajusta a imagem para cobrir todo o contêiner */
+  background-repeat: no-repeat; /* Impede que a imagem se repita */
+  padding: 20px;
+}
+.content-title-central-magistrado{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  z-index: 100000;
+}
+
+.title-central-magistrado{
+  color: #fff;
+  letter-spacing: 5px;
+}
+
+/* Adiciona uma camada escura sobre a imagem de fundo */
+.site-cliente-container::before {
+  content: ''; /* Necessário para criar um pseudo-elemento */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Cor preta com 50% de opacidade */
+  z-index: 1; /* Garante que a camada fique sobre a imagem */
+}
+
+
+.block-site-cliente{
+    display: flex;
+
+  }
+
+  .menu-options{
+    padding: 50px;
+    z-index: 1000;
+  }
+
+  .block-options-site{
+    display: flex;
+    gap: 20px;
+  }
+
+    .block-itens{
+      box-shadow: 0px 10px 15px 1px rgba(81, 77, 92, 0.5);
+      width: 220px;
+      height: 166px;
+      cursor: pointer;
+      margin-bottom: 20px;
+      background: rgb(16 12 12 / 70%);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      border-radius: 5px;
+      h1{
+        font-size: 22px;
+        color: #fff;
+      }
+  }
+
+  .block-itens:hover {
+    transform: translateY(-1px);
+    box-shadow: 0px 13px 19px 1px rgba(81, 77, 92, 0.7);
+  }
+
+
+img{
+  width: 35px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+
+button {
+  margin-top: 20px;
+  width: 70px;
+  cursor: pointer;
+}
+
+
+
+

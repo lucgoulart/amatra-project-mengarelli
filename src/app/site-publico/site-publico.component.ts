@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Route, Router } from '@angular/router';
 import { MockLoginService } from './mock-login.service';
 
 @Component({
@@ -21,8 +21,7 @@ export class SitePublicoComponent implements OnInit {
 
   login() {
     if (this.mockLoginService.login(this.usuario, this.password)) {
-      // Redirecionar para a página principal ou fazer outra ação
-      alert('Login bem-sucedido');
+    this.router.navigate(['site-cliente'])
     } else {
       // Exibir o modal de erro
       this.showErrorModal = true;
